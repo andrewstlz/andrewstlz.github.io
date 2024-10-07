@@ -32,19 +32,20 @@ const button = document.getElementById('powerUp');
 
 let scale1 = 1;
 let scale2 = 1;
-
 const maxScale = 2.5;
 
 function enlargeDivs() {
-    if (scale1 < maxScale && scale2 < maxScale) {
-        scale1 *= 1.1;
-        scale2 *= 1.1;
-        
+    if (scale1 < maxScale || scale2 < maxScale) {
+        scale1 = Math.min(scale1 * 1.1, maxScale); 
+        scale2 = Math.min(scale2 * 1.1, maxScale); 
+
         chick.style.transform = `scale(${scale1})`;
         wolf.style.transform = `scale(${scale2})`;
-    } else {
-        button.disabled = true;
-        button.textContent = "Failed";
+
+        if (scale1 >= maxScale && scale2 >= maxScale) {
+            button.textContent = "Failed!";
+            button.disabled = true; 
+        }
     }
 }
 
