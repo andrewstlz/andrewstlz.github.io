@@ -1,6 +1,62 @@
 <head>
+    <title>Welcome</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+    </style>
 </head>
-<body>
-    <a href="2.html">hello link!</a>
+<body class="index">
+    <br>
+    <h1 style="font-family: Patrick Hand">Welcome to Utopia!</h1> 
+    <h2 style="font-family: Patrick Hand">You are circle.</h2> 
+    <br>
+    <table id="tictactoe">
+        <tbody>
+            <tr>
+                <td><img src="cross.jpg" height="30px"></td>
+                <td>
+                    <input type="checkbox" id="checkbox1">
+                    <div id="popup1">
+                    <label for="checkbox1"></label> </div>
+                </td>
+                <td><img src="cross.jpg" height="30px"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="checkbox2">
+                    <div id="popup2">
+                    <label for="checkbox2"></label> </div>
+                </td>
+                <td><img src="circle.png" height="40px"></td>
+                <td>
+                    <input type="checkbox" id="checkbox3">
+                    <div id="popup3">
+                    <label for="checkbox3"></label> </div>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="cross.jpg" height="30px"></td>
+                <td>
+                    <input type="checkbox" id="checkbox4">
+                    <div id="popup4">
+                    <label for="checkbox4"></label> </div>
+                </td>
+                <td><img src="circle.png" height="40px"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="warning">
+        You lost. Game over. <br>
+        But life is not over.
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
