@@ -5,7 +5,14 @@ body {
         font-weight: 400;
         font-style: normal;
       }
+    .rampart-one-regular {
+    font-family: "Rampart One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+      
     border-left: 100px;
+    
 }
 
 body.index {
@@ -376,3 +383,79 @@ a {
     font-size: 13px;
 }
 
+#webringlink {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;    
+}
+
+#grey {
+    position: absolute;
+    height: 250px;
+    width: 400px;
+    top: calc(70vh);
+    left: calc(50vw - 200px);       
+}
+
+#grey:hover {
+    background-color: white;
+    border-color: grey;
+    border-width: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    animation: zoom 1.5s infinite;
+}
+
+#grey:hover #iconText {
+    visibility: visible;
+}
+
+#grey:hover #icon img {
+    animation: none;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+#icon {
+    margin-top: 30px;
+}
+
+#icon img {
+    border-radius: 50%;
+    animation: rotate 10s infinite linear;
+}
+
+#iconText {
+    white-space: pre;
+    white-space: post;
+    margin: 15px;
+    font-weight: bold;
+    font-size: 23px;
+    font-family: "Rampart One";
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    
+}
