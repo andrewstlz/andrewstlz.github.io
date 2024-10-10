@@ -12,6 +12,7 @@ body {
     }
       
     border-left: 100px;
+    border-bottom: 50px;
     
 }
 
@@ -397,7 +398,7 @@ a {
     height: 250px;
     width: 400px;
     top: calc(70vh);
-    left: calc(50vw - 200px);       
+    left: calc(75vw - 200px);       
 }
 
 #grey:hover {
