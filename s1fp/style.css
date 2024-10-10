@@ -397,7 +397,7 @@ a {
     position: absolute;
     height: 250px;
     width: 400px;
-    top: calc(70vh);
+    top: calc(80vh - 125px);
     left: calc(75vw - 200px);       
 }
 
