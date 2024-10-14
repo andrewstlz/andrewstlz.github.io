@@ -98,6 +98,7 @@ td {
 }
 
 #popup1, #popup2, #popup3, #popup4 {
+    cursor: pointer;
     width: 100px;
     height: 100px;
 }
@@ -107,6 +108,7 @@ td {
 }
 
 label {
+    cursor: pointer;
     display: block;
     width: 100%;
     height: 100%;
@@ -143,8 +145,6 @@ label {
 
 #tictactoe tr:first-child td:nth-child(2):hover {
     background-color: #eeeeee;
-    cursor: grab;
-
 }
 
 #tictactoe tr:nth-child(2) td:first-child {
@@ -153,8 +153,6 @@ label {
 
 #tictactoe tr:nth-child(2) td:first-child:hover {
     background-color: #eeeeee;
-    cursor: grab;
-
 }
 
 #tictactoe tr:nth-child(2) td:nth-child(3) {
@@ -163,8 +161,6 @@ label {
 
 #tictactoe tr:nth-child(2) td:nth-child(3):hover {
     background-color: #eeeeee;
-    cursor: grab;
-
 }
 
 #tictactoe tr:nth-child(3) td:nth-child(2) {
@@ -173,8 +169,6 @@ label {
 
 #tictactoe tr:nth-child(3) td:nth-child(2):hover {
     background-color: #eeeeee;
-    cursor: grab;
-
 }
 
 #warning {
