@@ -1,0 +1,210 @@
+body {
+    margin: 0px;
+    .patrick-hand-regular {
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+    .rampart-one-regular {
+    font-family: "Rampart One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+      
+    border-left: 100px;
+    border-bottom: 50px;
+    
+}
+
+
+body.jump {
+    background-color: black;
+}
+
+#bigtree {
+    position: absolute;
+    background-image: url("bigtree.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 20vw;
+    bottom: 500px;
+    left: 30px;
+    z-index: 999;
+}
+
+#smalltree {
+    position: absolute;
+    background-image: url("smalltree.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vw;
+    bottom: 510px; 
+    left: 55vw;
+    z-index: 999;
+}
+
+#fountain {
+    position: absolute;
+    background-image: url("fountain.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 20vw;
+    bottom: 480.7px;
+    left: 30vw;
+    z-index: 999;
+}
+
+#car {
+    position: absolute;
+    background-image: url("car.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 10vw;
+    left: 60vw;
+    z-index: 999;
+}
+
+#family {
+    visibility: hidden;
+}
+
+#car:active #family {
+    visibility: visible;
+}
+
+#purpleblock {
+    position: absolute;
+    background-image: url("purpleblock.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30vw;
+    bottom: 550px;
+    height: 15vw;
+    left: 65vw;
+    z-index: 999;
+}
+
+#letter {
+    visibility: hidden;
+}
+
+#purpleblock:active #letter {
+    visibility: visible;
+}
+
+#friends {
+    visibility: hidden;
+}
+
+#fountain:active #friends {
+    visibility: visible;
+}
+
+#bigtree:active #award {
+    visibility: visible;
+}
+
+#award {
+    visibility: hidden;
+
+}
+
+#baby {
+    visibility: hidden;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#smalltree:active #baby {
+    visibility: visible;   
+}
+
+#road {
+    position: absolute;
+    background-image: url("road.png");
+    opacity: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 20vw;
+    bottom: 230px;
+}
+
+#building {
+    position: absolute;
+    background:none;
+    height: 230px;
+    width: 100%;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+#side {
+    background: none;
+    background: rgba(45, 123, 124, 0.7);
+    transform: skew(-80deg);
+    height: 30px;
+    width: 110%;
+    bottom: 200px;
+    border: 3px;
+    border-color: white;
+    z-index: 1;
+}
+
+#podium {
+    background: rgba(99, 98, 98);
+    height: 200px;
+    width: 100%;
+    bottom: 0px;
+    border: 3px;
+    border-color: white;
+}
+
+#person {
+    position: absolute;
+    background-image: url("suicide-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90px;
+    height:100px;
+    top: -5px;
+    left: calc(50vw - 45px);
+    border-width: 30px;
+    z-index: 999;
+    animation: suicide 3s ease-in forwards;
+    animation-play-state:paused;
+}
+
+#person:hover {
+    animation-play-state: running;
+}
+
+#hole {
+    background: rgb(189, 175, 175, 0.4);
+    position: absolute;
+    height: 150px;
+    width: 90%;
+    bottom: 30px;
+    left: calc(5vw);
+    border: 3px;
+    border-color: white;
+    border-radius: calc(5vw);
+    z-index: 4;
+    
+}
+
+@keyframes suicide {
+    0% {
+        background-image: url("suicide-1.png");
+    }
+    50% {
+        background-image: url("suicide-2.png");
+    }
+    100% {
+        background-image: url("suicide-3.png")    
+    }
+}

@@ -98,7 +98,6 @@ td {
 }
 
 #popup1, #popup2, #popup3, #popup4 {
-    cursor: pointer;
     width: 100px;
     height: 100px;
 }
