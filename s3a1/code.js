@@ -138,6 +138,9 @@ const min = date.getMinutes();
 let currHour = 7;
 let currMin = 0;
 
+let currHourRotation = 0;
+let currMinuteRotation = 0;
+
 let hourHand = document.getElementById("hourHand");
 let minuteHand = document.getElementById("minuteHand");
 
@@ -168,11 +171,10 @@ function showerPopup() {
 }
 
 function rotateMinuteHand(hours, minutes) {
-    let hourDegrees = (12 / hours) * 360;
-    let minuteDegrees = 360 * hours + (60 / minutes) * 360;
-
-    hourHand.style.transform = 'rotate(' + hourDegrees + 'deg)';
-    minuteHand.style.transform = 'rotate(' + minuteDegrees + 'deg)'
+    currHourRotation += (12 / hours) * 360;
+    currMinuteRotation += 360 * hours + (60 / minutes) * 360;
+    hourHand.style.transform = 'rotate(' + currHourRotation + 'deg)';
+    minuteHand.style.transform = 'rotate(' + currMinuteRotation + 'deg)'
 
 }
 
