@@ -1,6 +1,6 @@
 body {
     font-family: 'Tangerine', serif;
-    background-image: url("/images/dungeon.avif"); 
+    background-image: url("dungeon.avif"); 
     background-size: cover;
     margin:0px;
 }
@@ -207,4 +207,5 @@ button {
     width: 100px;
     transition:3s;
 }
+
 
