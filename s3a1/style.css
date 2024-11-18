@@ -3,6 +3,7 @@ body {
     background-image: url("dungeon.avif"); 
     background-size: cover;
     margin:0px;
+    user-select:none;
 }
 
 .cute-font-regular {
@@ -202,10 +203,12 @@ button {
 
 .clockImage {
     position:absolute;
-    top:500px;
-    left:300px;
-    width: 100px;
+    right: 0px;
+    bottom:0px;
+    width: min(30vw, 30vh);
     transition:3s;
 }
+
+
 
 
