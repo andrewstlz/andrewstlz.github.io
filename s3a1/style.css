@@ -1,8 +1,8 @@
 body {
     font-family: 'Tangerine', serif;
-    background-image: url("/images/dungeon.avif");
-    background-repeat: no-repeat;
+    background-image: url("/images/dungeon.avif"); 
     background-size: cover;
+    margin:0px;
 }
 
 .cute-font-regular {
@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: row;
     position: relative;
-    width: 100%;
+    width: 100vw;
     top: 4vh;
     align-items: center;
     justify-content: center;
@@ -41,13 +41,6 @@ button {
     padding: 20px;
     color: black;
     visibility: hidden;
-}
-
-.sliderBox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
 }
 
 #difficultyValue, #numQuestionsValue {
@@ -110,8 +103,9 @@ button {
     height: 10vh;
     z-index: 999;
     color: white;
-    padding-top: 30px;
-    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -193,17 +187,24 @@ button {
 
 #eli {
     position: absolute;
-    height: 100%;
-    width: auto;
+    width: 200px;
     top: 300px;
-    left: 50vw;
-
+    left: 0vw;
+    animation: glide 30s infinite;
+    z-index: -999;
 }
+
+@keyframes glide {
+    0% {transform: translateX(calc(100vw - 200px)) rotate(30deg);}
+    50% {transform: translateX(0px)}
+    100% {transform: translateX(calc(100vw - 200px));}
+  }
 
 .clockImage {
     position:absolute;
     top:500px;
     left:300px;
     width: 100px;
+    transition:3s;
 }
 

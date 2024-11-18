@@ -33,14 +33,22 @@ class CISStudent {
         let p = this.ungradedHomework[index];
         this.ungradedHomework.splice(index, 1);
         let grade = p.getGrade();
-        if (grade < 0 || grade > 1) {
+        if (grade < 0 || grade > 100) {
             throw "IllegalArgumentException";
         }
-        if (grade <= 0.75) {
+        if (grade <= 75) {
             this.addDepression(0.3);
         }
         popupOn = true;
-        document.getElementById("homeworkGrade").style.visibility = 'visible';
+        let hwGrade = document.getElementById("homeworkGrade");
+        hwGrade.style.visibility = 'visible';
+        let s = 'Your score is ' + Math.round(grade*100) + '%. ';
+        if (grade >= 85) {
+            s += 'You barely passed!';
+        } else {
+            s += 'You failed!';
+        }
+        hwGrade.textContent = s;
         setTimeout(() => {
             popupOn = false;
             document.getElementById("homeworkGrade").style.visibility = 'hidden';
@@ -117,6 +125,7 @@ function submitHomework() {
     document.getElementById("createHomework").style.visibility = 'hidden';
     popupOn = false;
     document.getElementById("homeworkCountNumber").textContent = student.ungradedHomework.length;
+    addTime(10, 15);
 }
 
 function recieveHomeworkGrade() {
@@ -152,7 +161,16 @@ if (hour != 0) {
     //document.getElementById("title").style.visibility = 'hidden';
 }
 
-function showerPopup() {
+
+function sleep() {
+    sleepShower(2, 0);
+}
+
+function shower() {
+    sleepShower(0, 10);
+}
+
+function sleepShower(hour, min) {
     if (popupOn) {
         return;
     }
@@ -161,6 +179,7 @@ function showerPopup() {
         showerPopup = document.getElementById("showerPopup");
     } else {
         showerPopup = document.getElementById("showerPopup2");
+        addTime(hour, min);
     }
     showerPopup.style.visibility = 'visible';
     popupOn = true;
@@ -170,11 +189,14 @@ function showerPopup() {
     }, 5000);
 }
 
-function rotateMinuteHand(hours, minutes) {
-    currHourRotation += (12 / hours) * 360;
-    currMinuteRotation += 360 * hours + (60 / minutes) * 360;
+function addTime(hours, minutes) {
+    if (minutes < 0 || minutes > 59 || hours < 0) {
+        throw "IllegalArgumentException";
+    }
+    currHourRotation += (hours / 12) * 360;
+    currMinuteRotation += 360 * hours + (minutes / 60) * 360;
     hourHand.style.transform = 'rotate(' + currHourRotation + 'deg)';
-    minuteHand.style.transform = 'rotate(' + currMinuteRotation + 'deg)'
+    minuteHand.style.transform = 'rotate(' + currMinuteRotation + 'deg)';
 
 }
 
