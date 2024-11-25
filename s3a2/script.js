@@ -17,6 +17,7 @@ okay.addEventListener('click', () => {
         behavior: 'smooth',
         block: 'start'
     })
+    document.body.style.cursor = 'default';
 })
 
 nokay.addEventListener('click', () => {
@@ -24,4 +25,5 @@ nokay.addEventListener('click', () => {
         behavior: 'smooth',
         block: 'start'
     })
+    document.body.style.cursor = 'default';
 })

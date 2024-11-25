@@ -32,8 +32,8 @@ body {
   line-height: 250%; 
   width: 130px;
   height: 40px;
-  left: 45%;
-  top: 250px;
+  left: 40%;
+  bottom: 40%;
   border-radius: 10px;
   background-color: rgb(205, 198, 198, 0.8);
 }
@@ -73,8 +73,8 @@ body {
 #exam {
   display: none; 
   position: relative;
-  width: 40%;
-  height: 55%;
+  height: 56vh;
+  width: 40vh;
   margin: auto;
   top: 30%;
   border-color: black;
@@ -131,10 +131,12 @@ body {
 
 #postcard-back {
   display: none;
+  cursor: pointer;
 }
 
 #postcard-front {
   display: block;
+  cursor: pointer;
 }
 
 #showBack:checked ~ #showBackLabel > #postcard-front {
@@ -190,6 +192,7 @@ body {
   opacity: 0;
   transition: opacity 3s;
 }
+
 
 #showText:checked ~ #textBox {
   display: block;
