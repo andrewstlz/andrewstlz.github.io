@@ -1,19 +1,11 @@
 const girl = document.getElementById("girl");
 const exam = document.getElementById("exam");
 const curious = document.getElementById("curious");
-const cry = new Audio("cry.wav");
 
 girl.addEventListener('click', () => {
     exam.style.display = 'block';
     document.body.style.cursor = 'default';
     curious.style.visibility = 'hidden';
-
-    cry.play();
-    setTimeout(() => {
-        console.log("Stopping audio");
-        cry.pause();
-        cry.currentTime = 0;
-      }, 10000);
   });
 
 const okay = document.getElementById('okay');
@@ -25,7 +17,6 @@ okay.addEventListener('click', () => {
         behavior: 'smooth',
         block: 'start'
     })
-    cry.pause();
 })
 
 nokay.addEventListener('click', () => {
@@ -33,5 +24,4 @@ nokay.addEventListener('click', () => {
         behavior: 'smooth',
         block: 'start'
     })
-    cry.pause();
 })
