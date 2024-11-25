@@ -1,0 +1,108 @@
+body {
+  cursor: url("cry.png"), default;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.dynapuff {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+#page1 {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url("room.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#curious {
+  visibility: hidden;
+  position: absolute;
+  font-family: dynapuff;
+  text-align: center;
+  justify-content: center;
+  line-height: 250%; 
+  width: 130px;
+  height: 40px;
+  left: 45%;
+  top: 250px;
+  border-radius: 10px;
+  background-color: rgb(205, 198, 198, 0.8);
+}
+
+#girl {
+  background-image: url("girl.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 40%;
+  height: 200px;
+  left: 30%;
+  bottom: 10%;
+}
+
+#girl:hover {
+  cursor: pointer;
+}
+
+#girl:hover ~ #curious {
+  visibility: visible;
+  animation: pulse 3s infinite;
+} 
+
+@keyframes pulse {
+  0% {
+      transform: scale(0.9);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(0.9);
+  }
+}
+
+#exam {
+  display: none; 
+  position: relative;
+  width: 40%;
+  height: 55%;
+  margin: auto;
+  top: 30%;
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+  background-image: url("exam.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+#okay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+#nokay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+#page2 {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background-color: blue;
+}
