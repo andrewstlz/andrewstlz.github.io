@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  background: linear-gradient(to bottom right, #ECFFB0, #E8FDFF); 
+  background-
+  font-weight: bold;
+  font-family: "Shantell Sans";
+  font-size: 20px;
+  overflow: hidden;
+}
+
+#title:hover {
+  transform: scale(1.5);
+}
+
+
+
+canvas {
+  display: block;
+}
