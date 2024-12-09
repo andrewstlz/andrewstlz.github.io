@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+    .patrick-hand-regular {
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+    .rampart-one-regular {
+    font-family: "Rampart One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+      
+    border-left: 100px;
+    border-bottom: 50px;
+    background-image: url("sea.jpg");
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+#tictactoe {
+    align-self: center;
+    align-items: center;
+    flex:auto;
+}
+
+#rect, #rect2, #rect3, #rect4 {
+    position: relative;
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family:'Segoe UI', sans-serif;
+    font-weight: bold;
+}
+
+#rect5, #rect6, #rect7, #rect8, #rect9, #rect10, #rect11, #rect12, #rect13, #rect14, #rect15 {
+    position: relative;
+    height: 40px;
+    width: 100px;
+    background-color: blue;
+}
