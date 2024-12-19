@@ -10,11 +10,17 @@ body {
     font-weight: 400;
     font-style: normal;
     }
-      
     border-left: 100px;
     border-bottom: 50px;
     background-image: url("sea.jpg");
+    overflow: hidden;
+    user-select: none;
 }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 h1 {
     text-align: center;
@@ -22,13 +28,67 @@ h1 {
     color: white;
 }
 
-#tictactoe {
-    align-self: center;
-    align-items: center;
-    flex:auto;
+#marquee {
+    color: rgb(255, 255, 255);
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    font-weight: bold;
+    -webkit-text-stroke-width: .01vw;
+    -webkit-text-stroke-color: black;
+    letter-spacing: .5vw;
+    width: 1000vw;
+    overflow: hidden;
+    position: relative;
+    font-size: 5vw;
+    animation: lefttextscroll infinite 30s linear;
 }
 
-#rect, #rect2, #rect3, #rect4 {
+@keyframes lefttextscroll {
+    from{left: 0vw;}
+    to{left: -143vw}
+}
+
+#container {
+    position: absolute;
+    align-self: center;
+    align-items: center;
+    animation: boat infinite;
+    top: 40vh;
+    transform: rotate3d(1, 1, 1, -12deg);
+}
+
+#boat {
+    background-image: url("boat.png");
+    background-repeat:no-repeat;
+    position: absolute;
+    top: 150px;
+    width: 600px;
+    height: 300px;
+    transform: rotate3d(1, 1, 1, -45deg);
+}
+
+#shelf {
+    position: absolute;
+    border-color: white;
+    border-width: 5px;
+    border-style:solid;
+    box-shadow: 20px 10px 10px rgb(117, 130, 138);
+    transform: rotate3d(1, 1, 1, -12deg);
+}
+
+@keyframes boat {
+    0% {
+        top: 60vh;
+        left: -100vw;
+        transform: scale(1.5);
+    }
+    100% {
+        top: 30vh;
+        left: 100vw;
+        transform: scale(0.8);
+    }
+}
+
+#rect, #rect2, #rect3, #rect4, #rect5 {
     position: relative;
     height: 40px;
     width: 100px;
@@ -39,9 +99,10 @@ h1 {
     font-weight: bold;
 }
 
-#rect5, #rect6, #rect7, #rect8, #rect9, #rect10, #rect11, #rect12, #rect13, #rect14, #rect15 {
+#rect6, #rect7, #rect8, #rect9, 
+#rect10, #rect11, #rect12, #rect13 {
     position: relative;
     height: 40px;
     width: 100px;
-    background-color: blue;
+    background-color: rgb(13, 37, 40);
 }
