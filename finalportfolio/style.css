@@ -142,9 +142,27 @@ h1 {
     background-color: rgb(13, 37, 40);
 }
 
+#hole {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    height: 20%;
+    width: 90%;
+    background-color: rgba(182, 171, 171, 0.61);
+}
+
+#hole2 {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    height: 20%;
+    width: 90%;
+    background-color: rgba(182, 171, 171, 0.61);
+}
+
 [id^="s1a"]:hover, [id^="s2a"]:hover, [id^="s3a"]:hover {
-    background-color: rgb(32, 68, 73);
-    cursor:grab;
+    background-color: rgb(109, 126, 128);
+    cursor: grab;
 }
 
 #playIcon {

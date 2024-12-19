@@ -1,0 +1,133 @@
+body {
+    margin: 0px;
+    .patrick-hand-regular {
+        font-family: "Patrick Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+    .rampart-one-regular {
+    font-family: "Rampart One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    .cute-font-regular {
+        font-family: "Cute Font", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .boogaloo-regular {
+        font-family: "Boogaloo", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .shantell-sans {
+        font-family: "Shantell Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: 400px;
+        font-style: normal;
+        font-variation-settings:
+          "BNCE" 0,
+          "INFM" 0,
+          "SPAC" 0;
+    }         
+    .faustina {
+        font-family: "Faustina", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+}
+
+#sticky {
+    position: sticky;
+    top: 0vh;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background-color: black;
+  border: 3px solid white;
+  padding: 0.25em 0.5em;
+  position: absolute;
+  top: 5vh;
+  left: 40px;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+    background: rgb(220, 231, 236);
+}
+.button:active {
+  border: 4px solid;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: url("sea.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    z-index: -1;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+h1 {
+    text-align: center;
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 40px;
+}
+
+#week2, #week3, #week4, #week5, #week6, #week8, #week10, #week12, #week13, #week14, #week15 {
+    position: relative;
+    margin: 30px;
+    padding: 10px;
+    color: black;
+    animation: minor-scale linear both;
+    animation-timeline: view();
+    animation-range: 25vh 55vh;
+    user-select: text;
+    font-family:'Faustina', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#week2, #week8, #week15 {
+    background-color: rgb(175, 231, 235);
+}
+
+#week3, #week10 {
+    background-color: rgb(244, 252, 201);
+}
+
+#week4, #week12 {
+    background-color: rgb(213, 247, 244);
+}
+
+#week5, #week13 {
+    background-color: rgb(220, 234, 178);
+}
+
+#week6, #week14 {
+    background-color: rgb(204, 250, 229);
+}
+
+@keyframes minor-scale {
+    from {
+        transform: scale(0.9);
+    }
+}
