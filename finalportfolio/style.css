@@ -13,6 +13,8 @@ body {
     border-left: 100px;
     border-bottom: 50px;
     background-image: url("sea.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
     overflow: hidden;
     user-select: none;
 }
@@ -40,6 +42,7 @@ h1 {
     position: relative;
     font-size: 5vw;
     animation: lefttextscroll infinite 30s linear;
+    user-select: none;
 }
 
 @keyframes lefttextscroll {
@@ -51,19 +54,20 @@ h1 {
     position: absolute;
     align-self: center;
     align-items: center;
-    animation: boat infinite;
+    animation: row 30s infinite, rotate 1s infinite;
     top: 40vh;
-    transform: rotate3d(1, 1, 1, -12deg);
+    transform-origin: 35vw 35vh;
 }
 
 #boat {
     background-image: url("boat.png");
     background-repeat:no-repeat;
     position: absolute;
-    top: 150px;
+    top: 100px;
     width: 600px;
     height: 300px;
     transform: rotate3d(1, 1, 1, -45deg);
+    z-index: 4;
 }
 
 #shelf {
@@ -73,18 +77,31 @@ h1 {
     border-style:solid;
     box-shadow: 20px 10px 10px rgb(117, 130, 138);
     transform: rotate3d(1, 1, 1, -12deg);
+    z-index: 5;
 }
 
-@keyframes boat {
+
+@keyframes rotate {
+    0%, 100% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg);}
+}
+
+@keyframes row {
     0% {
-        top: 60vh;
+        bottom: 40vh;
         left: -100vw;
-        transform: scale(1.5);
+    }
+    20% {
+        bottom: 60vh;
+        left: 25vw;
+    }
+    80% {
+        bottom: 60vh;
+        left: 25vw;
     }
     100% {
-        top: 30vh;
-        left: 100vw;
-        transform: scale(0.8);
+        bottom: 70vh;
+        left: 110vw;
     }
 }
 
@@ -97,12 +114,60 @@ h1 {
     text-align: center;
     font-family:'Segoe UI', sans-serif;
     font-weight: bold;
+    user-select: none;
 }
 
-#rect6, #rect7, #rect8, #rect9, 
-#rect10, #rect11, #rect12, #rect13 {
+#readingResponses {
     position: relative;
+    height: 80px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family:'Segoe UI', sans-serif;
+    cursor: grab;
+}
+
+#readingResponses:hover {
+    background-color: rgb(32, 73, 48);
+}
+
+[id^="s1a"], [id^="s2a"], [id^="s3a"] {
+    position: relative;
+    color: white;
     height: 40px;
     width: 100px;
+    font-family:'Segoe UI', sans-serif;
+    text-align: center;
     background-color: rgb(13, 37, 40);
+}
+
+[id^="s1a"]:hover, [id^="s2a"]:hover, [id^="s3a"]:hover {
+    background-color: rgb(32, 68, 73);
+    cursor:grab;
+}
+
+#playIcon {
+    position: absolute;
+    width: 5vw;
+    height: auto;
+    bottom: 20px;
+    left: 20px;
+    cursor:grab;
+    transform:scaleX(0.9);
+}
+
+#muteIcon {
+    position: absolute;
+    width: 4vw;
+    height: auto;
+    bottom: 25px;
+    left: 20px;
+    cursor:grab;
+    visibility: hidden;
+    transform:scaleY(0.9);
+}
+
+#playIcon:hover, #muteIcon:hover {
+    transform: scale(1.1);
 }
